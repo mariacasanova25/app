@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: app
+
+  cassandra:
+    contact-points: ${SPRING_DATA_CASSANDRA_CONTACT_POINTS:cassandra}
+    port: ${SPRING_DATA_CASSANDRA_PORT:9042}
+    keyspace-name: ${SPRING_DATA_CASSANDRA_KEYSPACE_NAME:my_keyspace}
+    schema-action: CREATE_IF_NOT_EXISTS
+    local-datacenter: datacenter1
+
+server:
+  address: 0.0.0.0
+  port: 8080
+
+security:
+  username: user
+  password: password
+  role: USER
